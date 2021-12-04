@@ -13,7 +13,7 @@ header{
 
 h1 {
   text-shadow: 0.1em 0.1em 0.05em #333;
-  color: #48ff9e;
+  color: #09c05e;
   
   text-align: center;
 }
@@ -89,7 +89,8 @@ button:hover{
 }
 /* dark mode */
 .dark-mode {
-background: rgb(53, 50, 50);
+/* background: rgb(53, 50, 50); */
+background: url('https://cdn.wallpapersafari.com/99/18/JHlU5w.gif');
 }
 .dark-mode header h1{
  color: rgb(32, 175, 214);
@@ -153,6 +154,9 @@ span{
 #dark-button{
   background-color: rgb(231, 93, 13);
 }
+.dark-mode{
+  background: url('https://i.pinimg.com/originals/95/9f/b1/959fb1f51bc1026ace27acede55e1bc8.gif');
+}
   section div {
     margin-top: 0.5em;
     font-size: xx-large;
@@ -180,19 +184,21 @@ header{
     margin-bottom: 7em;
 
   }
-  .dark-mode{
-    background-color: rgb(40, 39, 59);
-
-  }
+  
   body {
-    background: linear-gradient(to bottom, #fc4a1a, #f7b733)
+    /* background: linear-gradient(to bottom, #fc4a1a, #f7b733) */
+    background-image: url('https://wallpaperaccess.com/full/4895780.jpg') ;
+    background-repeat: no-repeat;
+    background-size: 500px 700px;
   }
 }
 
 /* tablet */
 @media screen and (min-width:569px) and (max-width:1024px) {
   body {
-    background-color: brown;
+    background: url('https://i.pinimg.com/originals/98/88/39/98883983df91cdb54c13cf80dbf9704f.png');
+    background-size: 115%;
+    background-repeat: no-repeat;
   }
  
   section {
@@ -221,6 +227,11 @@ button{
   #dark-button{
     background-color: rgb(240, 46, 46);
   }
+  .dark-mode{
+    background: url('https://cutewallpaper.org/21/black-gif-background/Black-gif-background-3-GIF-Images-Download.gif');
+    background-repeat: no-repeat;
+    background-size: 119%;
+  }
   .logo-image {
     margin: 10% 0 10% 45%;
 
@@ -232,8 +243,10 @@ button{
 @media screen and (min-width: 1025px) {
   body {
     /*  background: linear-gradient(to top, #ff8a00, #f88418, #a74183)  */
-    background-color: #a74183;
-   
+    /* background-color: #a74183; */
+    background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/73/94/g6jtfB.jpg') ;
+    background-size: 1400px 900px;
+    background-repeat: no-repeat;
   }
 
   .logo-image {
