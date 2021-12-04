@@ -1,38 +1,228 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+p,h1 {
+
+  
+  font-family: Raleway;
+}
+header{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5em
+}
+button{
+  height: 2em;
+  
+}
+.dark-mode {
+background: rgb(53, 50, 50);
+}
+.dark-mode header h1{
+ color: rgb(32, 175, 214);
+ text-shadow: 0.01em 0.06em 0.05em rgba(160, 152, 152, 0.514);
+
+
+}
+.dark-mode section{
+  animation: dark 2s infinite alternate-reverse;
+  
+}
+@keyframes dark {
+  from {
+    border: solid #f5e025;
+    transform: translateX(0deg);
+    color: aliceblue;
+  }
+  
+  to {
+    background-color: rgb(82, 80, 80);
+    border: solid rgb(231, 88, 6);
+    transform: translateX(10deg);
+    box-shadow: 0.1em 0.01em 0.5em 0.5em rgb(45, 135, 209);
+    color: cyan;
+  
+
+
+  }
+
+}
+h1 {
+  text-shadow: 0.1em 0.1em 0.05em #333;
+  color: #4BC18D;
+  
   text-align: center;
 }
+p{
+  font-size: small;
+}
+span{
+  font-size: xx-large;
+  
+}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  font-family: sans-serif ;
+  display: flex;
+  border: solid rgba(0, 0, 0, 0.658);
+  gap: 0.5em;
+  text-align: center;
+  font-size: x-large;
+  max-width: 30em;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 7px;
+}
+.default-mode{
+  animation: min 2s infinite alternate-reverse;
+  
+}
+
+.logo-image {
+  margin-left: 45%;
+}
+
+@keyframes min {
+  from {
+    border: solid #3c1053;
+    transform: translateX(0deg);
+    color: aliceblue;
+  }
+
+  to {
+    
+    background: linear-gradient(to top, #a2be96, #84e67b);
+    border: solid rgb(141, 121, 5);
+    transform: translateX(10deg);
+    box-shadow: 0.1em 0.01em 0.5em 0.5em rgb(35, 160, 18);
+
+  }
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .logo-image {
+    animation: trybe-logo-spin infinite 15s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes trybe-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+/* iphone 5 */
+@media screen and (max-width: 568px) {
+  section {
+    margin: 3em 5% 0 7%;
+
+
+  }
+span{
+  margin-top: 0.5em;
+}
+  section div {
+    margin-top: 0.5em;
+    font-size: xx-large;
+
+  }
+  button{
+    width: 10em ;
+    text-align: center;
+    margin-left: 13em;
+  }
+header{
+  flex-direction: column;
+}
+  h1 {
+    font-size: 1.7em;
+    text-align: center;
+    margin: 1em 0 0 1em;
+   
+    ;
+  }
+
+  .logo-image {
+    margin-left: 40%;
+    margin-top: 20%;
+    margin-bottom: 7em;
+
+  }
+
+  body {
+    background-color: rgb(18, 11, 124);
+  }
+}
+/* tablet */
+@media screen and (min-width:569px) and (max-width:1024px) {
+  body {
+    background-color: brown;
+  }
+
+  section {
+    margin: 10% 1% 0 15%;
+    color: rgb(3, 11, 27);
+
+  }
+  span{
+    margin-top: 0.5em;
+  }
+button{
+  margin: 5.9% 5% 0 0;
+  
+}
+  section div {
+    margin-top: 0.5em;
+    font-size: xx-large;
+  }
+
+  h1 {
+    font-size: 2.8em;
+    text-align: center;
+    margin: 1em 0 0 3em;
+  }
+
+  .logo-image {
+    margin: 10% 0 14.5% 45%;
+
+  }
+}
+
+
+/* pc */
+@media screen and (min-width: 1025px) {
+  body {
+    background: linear-gradient(to bottom, #6e5b66, #940910)
+  }
+
+  .logo-image {
+    margin-bottom: 3.35em;
+  }
+  button{
+    margin-top: 5%;
+  }
+h1 {
+font-size: 3em;
+margin: 1em 0 0 4em;
+}
+  section {
+    height: 7em;
+    margin: 5em 0 4.4em 23%;
+  }
+  span{
+    margin-top: 1.5em;
+  }
+  section div {
+    margin-top: 1.5em;
+    font-size: xx-large;
+
+  }
+
+
 }
