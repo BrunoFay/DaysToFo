@@ -23,31 +23,31 @@ export default class DaysRemains extends Component {
         let buttom =this.catchButton.current
         main.classList.toggle('dark-mode')
         section.classList.toggle('default-mode')
-       if(main.className === 'dark-mode'){
+        if(main.className === 'dark-mode'){
+           buttom.id = 'dark-button'
            buttom.textContent = 'Light'
     }
     else{
         buttom.textContent = 'Dark'
-   
-    }
+        buttom.id=''
         
-
-       console.log(buttom.textContent)
-        console.log(main);
-        
-    }
+   }
+       console.log(buttom.id)
+        }
 
     setDays = () => {
+        //reference https://www.youtube.com/watch?v=ZVOGPvo08zM&list=PLQJ8gyeGbuDoo2jycRn9nEBhuyg3gDzOi&index=13
         const trybeGraduation = new Date('Aug 9, 2022 00:00:00').getTime()
         const interval = setInterval(() => {
             const todayDate = new Date().getTime()
             const daysRemains = trybeGraduation - todayDate
 
+            const hour = 1000 * 60 * 60 * 24
             const min = 1000 * 60 * 60
             const sec = 1000 * 60
 
-            const dayTime = Math.floor(daysRemains / (1000 * 60 * 60 * 24))
-            const hTime = Math.floor(daysRemains % (1000 * 60 * 60 * 24) / min)
+            const dayTime = Math.floor(daysRemains / hour)
+            const hTime = Math.floor(daysRemains % hour / min)
             const mTime = Math.floor(daysRemains % min / sec)
             const sTime = Math.floor(daysRemains % sec / 1000)
             daysRemains < 0 ? clearInterval(interval) : this.setState({

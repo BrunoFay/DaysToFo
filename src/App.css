@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-
+/* default settings */
 p,h1 {
 
   
@@ -10,10 +10,84 @@ header{
   justify-content: space-evenly;
   gap: 5em
 }
-button{
-  height: 2em;
+
+h1 {
+  text-shadow: 0.1em 0.1em 0.05em #333;
+  color: #48ff9e;
+  
+  text-align: center;
+}
+p{
+  font-size: small;
+}
+span{
+  font-size: xx-large;
   
 }
+section {
+  font-family: sans-serif ;
+  display: flex;
+  border: solid rgba(0, 0, 0, 0.658);
+  gap: 0.5em;
+  text-align: center;
+  font-size: x-large;
+  max-width: 30em;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 7px;
+}
+.default-mode{
+  animation: display-effect 2s infinite alternate-reverse;
+  
+}
+
+.logo-image {
+  margin-left: 45%;
+}
+
+@keyframes display-effect {
+  from {
+    border: solid #3c1053;
+    transform: translateX(0deg);
+    color: aliceblue;
+  }
+
+  to {
+    color: #0a6b01;
+    text-shadow: 0.01em 0.1em 0.05em rgba(51, 51, 51, 0.349);
+
+    background: linear-gradient(to top, #7f8f78, #e69d7b);
+    border: solid rgb(141, 121, 5);
+    transform: translateX(10deg);
+    box-shadow: 0.1em 0.01em 0.5em 0.5em rgb(35, 160, 18);
+
+  }
+
+}
+
+/* buttons */
+button{
+  font-size: medium;
+  font-weight: bolder;
+  min-width: 4em;
+  height: 2em;
+  border-radius: 0.5em;
+  border: none;
+  opacity: 0.7;
+  background-color: rgb(7, 8, 8);
+  color:rgb(243, 234, 234)
+}
+button:hover{
+  opacity: 1;
+}
+
+#dark-button{
+  
+ 
+  color: white;
+  
+}
+/* dark mode */
 .dark-mode {
 background: rgb(53, 50, 50);
 }
@@ -40,65 +114,14 @@ background: rgb(53, 50, 50);
     transform: translateX(10deg);
     box-shadow: 0.1em 0.01em 0.5em 0.5em rgb(45, 135, 209);
     color: cyan;
-  
-
-
-  }
-
-}
-h1 {
-  text-shadow: 0.1em 0.1em 0.05em #333;
-  color: #4BC18D;
-  
-  text-align: center;
-}
-p{
-  font-size: small;
-}
-span{
-  font-size: xx-large;
-  
-}
-
-section {
-  font-family: sans-serif ;
-  display: flex;
-  border: solid rgba(0, 0, 0, 0.658);
-  gap: 0.5em;
-  text-align: center;
-  font-size: x-large;
-  max-width: 30em;
-  justify-content: space-evenly;
-  text-align: center;
-  border-radius: 7px;
-}
-.default-mode{
-  animation: min 2s infinite alternate-reverse;
-  
-}
-
-.logo-image {
-  margin-left: 45%;
-}
-
-@keyframes min {
-  from {
-    border: solid #3c1053;
-    transform: translateX(0deg);
-    color: aliceblue;
-  }
-
-  to {
-    
-    background: linear-gradient(to top, #a2be96, #84e67b);
-    border: solid rgb(141, 121, 5);
-    transform: translateX(10deg);
-    box-shadow: 0.1em 0.01em 0.5em 0.5em rgb(35, 160, 18);
-
+    text-shadow: 0.01em 0.1em 0.05em #333;
   }
 
 }
 
+
+
+/* image-trybe-logo */
 @media (prefers-reduced-motion: no-preference) {
   .logo-image {
     animation: trybe-logo-spin infinite 15s linear;
@@ -117,7 +140,7 @@ section {
 
 
 
-/* iphone 5 */
+/* iphone 6*/
 @media screen and (max-width: 568px) {
   section {
     margin: 3em 5% 0 7%;
@@ -127,6 +150,9 @@ section {
 span{
   margin-top: 0.5em;
 }
+#dark-button{
+  background-color: rgb(231, 93, 13);
+}
   section div {
     margin-top: 0.5em;
     font-size: xx-large;
@@ -135,7 +161,7 @@ span{
   button{
     width: 10em ;
     text-align: center;
-    margin-left: 13em;
+    margin-left: 11em;
   }
 header{
   flex-direction: column;
@@ -154,31 +180,36 @@ header{
     margin-bottom: 7em;
 
   }
+  .dark-mode{
+    background-color: rgb(40, 39, 59);
 
+  }
   body {
-    background-color: rgb(18, 11, 124);
+    background: linear-gradient(to bottom, #fc4a1a, #f7b733)
   }
 }
+
 /* tablet */
 @media screen and (min-width:569px) and (max-width:1024px) {
   body {
     background-color: brown;
   }
-
+ 
   section {
-    margin: 10% 1% 0 15%;
+    margin: 10% 1% 0.8% 15%;
     color: rgb(3, 11, 27);
+   height: 5.5em;
 
   }
   span{
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
 button{
   margin: 5.9% 5% 0 0;
   
 }
   section div {
-    margin-top: 0.5em;
+    margin-top: 1em;
     font-size: xx-large;
   }
 
@@ -187,9 +218,11 @@ button{
     text-align: center;
     margin: 1em 0 0 3em;
   }
-
+  #dark-button{
+    background-color: rgb(240, 46, 46);
+  }
   .logo-image {
-    margin: 10% 0 14.5% 45%;
+    margin: 10% 0 10% 45%;
 
   }
 }
@@ -198,7 +231,9 @@ button{
 /* pc */
 @media screen and (min-width: 1025px) {
   body {
-    background: linear-gradient(to bottom, #6e5b66, #940910)
+    /*  background: linear-gradient(to top, #ff8a00, #f88418, #a74183)  */
+    background-color: #a74183;
+   
   }
 
   .logo-image {
@@ -210,6 +245,9 @@ button{
 h1 {
 font-size: 3em;
 margin: 1em 0 0 4em;
+}
+#dark-button{
+  background-color: rgb(245, 50, 24);
 }
   section {
     height: 7em;
