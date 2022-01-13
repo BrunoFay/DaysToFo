@@ -18,9 +18,9 @@ export default class DaysRemains extends Component {
     }
     componentDidMount() {this.setDays()}
     darkMode =() =>{
-        let main = this.catchMain.current
-        let section =this.catchSection.current
-        let buttom =this.catchButton.current
+        const main = this.catchMain.current
+        const section =this.catchSection.current
+        const buttom =this.catchButton.current
         main.classList.toggle('dark-mode')
         section.classList.toggle('default-mode')
         if(main.className === 'dark-mode'){
