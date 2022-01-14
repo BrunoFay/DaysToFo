@@ -159,13 +159,12 @@ span{
 }
   section div {
     margin-top: 0.5em;
-    font-size: xx-large;
-
+    font-size: clamp(small,xx-large,xx-large);
   }
   button{
     width: 10em ;
     text-align: center;
-    margin-left: 11em;
+    margin-left: 30%;
   }
 header{
   flex-direction: column;
