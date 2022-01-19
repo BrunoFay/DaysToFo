@@ -1,4 +1,4 @@
-import React, { Component,createRef } from 'react'
+import React, { Component, createRef } from 'react'
 import logo from './main_logo.png'
 
 
@@ -16,24 +16,24 @@ export default class DaysRemains extends Component {
         this.catchButton = createRef()
 
     }
-    componentDidMount() {this.setDays()}
-    darkMode =() =>{
+    componentDidMount() { this.setDays() }
+    darkMode = () => {
         const main = this.catchMain.current
-        const section =this.catchSection.current
-        const buttom =this.catchButton.current
+        const section = this.catchSection.current
+        const buttom = this.catchButton.current
         main.classList.toggle('dark-mode')
         section.classList.toggle('default-mode')
-        if(main.className === 'dark-mode'){
-           buttom.id = 'dark-button'
-           buttom.textContent = 'Light'
-    }
-    else{
-        buttom.textContent = 'Dark'
-        buttom.id=''
-        
-   }
-       console.log(buttom.id)
+        if (main.className === 'dark-mode') {
+            buttom.id = 'dark-button'
+            buttom.textContent = 'Light'
         }
+        else {
+            buttom.textContent = 'Dark'
+            buttom.id = ''
+
+        }
+
+    }
 
     setDays = () => {
         //reference https://www.youtube.com/watch?v=ZVOGPvo08zM&list=PLQJ8gyeGbuDoo2jycRn9nEBhuyg3gDzOi&index=13
@@ -63,11 +63,11 @@ export default class DaysRemains extends Component {
         const { dayTime, hTime, mTime, sTime } = this.state
         return (
             <main ref={this.catchMain}>
-               <header> 
-                   <h1> Dias para formatura da turma 16</h1>
-                <button ref={this.catchButton} onClick={this.darkMode}>Dark</button>
-                   
-               </header>
+                <header>
+                    <h1> Dias para formatura da turma 16</h1>
+                    <button ref={this.catchButton} onClick={this.darkMode}>Dark</button>
+
+                </header>
                 <section ref={this.catchSection} className='default-mode'>
                     <div className='days'>
                         {dayTime}
