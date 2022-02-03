@@ -1,6 +1,12 @@
 # Dias para a formatura da turma 16 na Trybe
 
 Projeto realizado com React para calcular quantos dias faltam para se completar um ano em que a turma 16 entrou para o curso da Trybe.
+### Conhecimentos utilizados
+* Componentes de classe 
+* JavaScript
+* Lifeciclo e states 
+
+
 ### Responsividade
 Há cobertura para responsividade para 4 modelos de aparelhos.
 * iPhone 5 (320 x 568)
